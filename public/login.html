@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <!--Google Fonts and Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"/>
+      <style>
+        body {
+      background: black; /* Change background color to black */
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+        /* Your CSS styles here */
+        /* ... (Your existing styles) ... */
+        /* Modal styles */
+
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+    
+        .modal-content {
+          background-color: #fefefe;
+          margin: 10% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+    
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+    
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      text-align: center;
+    }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="center">
+            <form id="loginForm" onsubmit="return validateForm()">
+              <div class="title">Login</div>
+              <span class="inputs">
+                <span class="inputf">
+                  <input type="email" class="input" id="email" placeholder="Email" />
+                  <span class="label">Email</span>
+                  <span class="material-icons icon">email</span>
+                </span>
+                <span class="inputf">
+                  <input type="password" class="input" id="password" placeholder="Password" />
+                  <span class="label">Password</span>
+                  <span class="material-icons icon">lock</span>
+                </span>
+              </span>
+              <div class="links">
+                <a href="forgot.html">Forgot Password</a>
+                <label for="remember">
+                  <input type="checkbox" id="remember" />
+                  Remember Me
+                </label>
+              </div>
+              <button type="submit" class="btn">
+                <span>Login</span>
+                <div class="dots">
+                  <div class="dot" style="--delay: 0s"></div>
+                  <div class="dot" style="--delay: 0.25s"></div>
+                  <div class="dot" style="--delay: 0.5s"></div>
+                </div>
+              </button>
+              <div class="text">
+                New user? Create an account <a href="#" id="registerLink">Register</a>
+              </div>
+            </form>
+          </div>
+
+            <!-- Modal for Forgot Password -->
+        <div id="forgotPasswordModal" class="modal-overlay">
+            <div class="modal-content">
+            <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+            <h2>Forgot Password</h2>
+            <p>Enter your email to reset your password</p>
+            <input type="email" id="forgotPasswordEmail" placeholder="Your Email">
+            <button onclick="sendResetLink()">Reset Password</button>
+            </div>
+        </div>
+
+
+        
+          <!-- Registration Modal -->
+          <div id="registrationModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <form id="registerForm" onsubmit="return registerUser()">
+                <div class="title">Register</div>
+                <span class="inputs">
+                  <span class="inputf">
+                    <input type="email" class="input" id="regEmail" placeholder="Email" />
+                    <span class="label">Email</span>
+                    <span class="material-icons icon">email</span>
+                  </span>
+                  <span class="inputf">
+                    <input type="password" class="input" id="regPassword" placeholder="Password" />
+                    <span class="label">Password</span>
+                    <span class="material-icons icon">lock</span>
+                  </span>
+                </span>
+                <button type="submit" class="btn">
+                  <span>Register</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <footer>
+            <a href="index.html" class="home-button">Go Home</a>
+          </footer>
+          <script>
+            // Array to store registered users
+            const registeredUsers = [];
+        
+            function validateForm() {
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+        
+              // Simulated user authentication
+              const user = registeredUsers.find(u => u.email === email && u.password === password);
+              if (user) {
+                alert('Login successful'); // You can use other methods for displaying success message
+              } else {
+                alert('Login failed. Invalid email or password.');
+              }
+        
+              return false; // Prevent actual form submission for this demonstration
+            }
+        
+            function openModal() {
+              document.getElementById('registrationModal').style.display = 'block';
+            }
+        
+            function closeModal() {
+              document.getElementById('registrationModal').style.display = 'none';
+            }
+        
+            function registerUser() {
+              const regEmail = document.getElementById('regEmail').value;
+              const regPassword = document.getElementById('regPassword').value;
+        
+              // Simulated user registration
+              registeredUsers.push({ email: regEmail, password: regPassword });
+              alert('Registered successfully!');
+              closeModal();
+        
+              return false; // Prevent actual form submission for this demonstration
+            }
+        
+            document.getElementById('registerLink').addEventListener('click', function(event) {
+              event.preventDefault(); // Prevent default link behavior
+              openModal(); // Open registration modal
+            });
+
+            // Function to open the Forgot Password modal
+            function openForgotPasswordModal() {
+            document.getElementById('forgotPasswordModal').style.display = 'block';
+            }
+
+            // Function to close the Forgot Password modal
+            function closeForgotPasswordModal() {
+            document.getElementById('forgotPasswordModal').style.display = 'none';
+            }
+
+            // Simulated function to send a reset link
+            function sendResetLink() {
+            const email = document.getElementById('forgotPasswordEmail').value;
+            // Simulated reset process - You would use an actual backend service to handle this in a real scenario
+            if (email) {
+                alert("A password reset link has been sent to your email.");
+                closeForgotPasswordModal();
+            } else {
+                alert("Please enter a valid email.");
+            }
+    }
+          </script>
+        </body>
+        </html>

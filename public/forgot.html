@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+    <div class="center">
+        <form id="forgotPasswordForm" onsubmit="simulateResetLink(event)">
+            <h1 class="title">Forgot Password</h1>
+            <p class="text">Enter your email to reset your password</p>
+            <div class="inputs">
+                <div class="inputf">
+                    <input type="email" id="forgotPasswordEmail" class="input" required>
+                    <label class="label">Your Email</label>
+                </div>
+                <button type="submit" class="btn"><span>Reset Password</span></button>
+            </div>
+            <div id="resetInfo" style="display: none;">
+                <p id="resetConfirmation">Reset link has been sent to the entered email:</p>
+                <p id="enteredEmail"></p>
+            </div>
+        </form>
+    </div>
+
+    <button class="back-btn" onclick="goToLogin()"><span>Back to Login</span></button>
+
+    <script>
+        function simulateResetLink(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById('forgotPasswordEmail').value;
+
+            if (email) {
+                // Display confirmation message and entered email
+                document.getElementById('resetConfirmation').style.display = 'block';
+                document.getElementById('enteredEmail').style.display = 'block';
+                document.getElementById('enteredEmail').textContent = email;
+                document.getElementById('resetInfo').style.display = 'block';
+            } else {
+                alert("Please enter a valid email.");
+            }
+        }
+
+        function goToLogin() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
