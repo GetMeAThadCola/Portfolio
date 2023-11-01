@@ -75,11 +75,9 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Inventory Management System with Tkinter and SQLite"
+              description="This project is an inventory management system designed to maintain records of various items using a Graphical User Interface (GUI) created with Tkinter in Python. The system stores its data in a SQLite database, allowing users to add, delete, search, and manage inventory items efficiently."
+              ghLink="https://github.com/getmeathadcola/Scripting-Projects/tree/main/VSCodePojects/Inventory%20Manager"
             />
           </Col>
         </Row>
