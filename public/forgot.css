@@ -3,7 +3,9 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: black; /* Set the background to black */
+    background: black; /* Set the body background to black */
+    color: white; /* Set text color to white */
+    font-family: 'Poppins', sans-serif; /* Use the Poppins font */
 }
 
 .center {
@@ -12,40 +14,108 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: url(../images/login-back.png);
     background-size: cover;
 }
 
 form {
-    width: 400px;
-    height: 450px;
+    width: 320px;
     box-sizing: border-box;
     border-radius: 5mm;
     padding: 40px 30px;
     backdrop-filter: blur(5px) saturate(160%);
     -webkit-backdrop-filter: blur(5px) saturate(160%);
-    background: #000; /* Changed to solid black */
-    border: 0.5mm solid rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
-    background: black; /* Set the form background to black */
+    text-align: center;
 }
 
 .title {
-    width: 100%;
-    font-family: poppins;
     font-size: 30px;
-    text-align: center;
     margin-bottom: 20px;
-    color: white;
 }
 
 .inputs {
-    width: 100%;
-    height: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-/* Add the rest of the styles for the other classes used in your HTML */
+.inputf {
+    margin: 15px 0;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: none;
+    padding: 0 10px;
+    font-size: 15px;
+    color: white;
+    outline: none;
+}
+
+.input::placeholder {
+    color: rgb(241, 232, 232);
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.25s ease-out;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+    top: -20px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background: #fff; /* White background */
+    border: none;
+    cursor: pointer;
+    border-radius: 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Increased margin for spacing */
+    color: #333; /* Dark text color */
+}
+
+.btn span {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Style for the "Back to Login" button */
+.back-btn {
+    width: 100%;
+    height: 40px;
+    background: #333; /* Dark background */
+    border: none;
+    cursor: pointer;
+    border-radius: 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Adjusted margin */
+    color: #fff; /* White text color */
+}
+
+.back-btn span {
+    color: #fff;
+    font-size: 16px;
+}
