@@ -25,10 +25,9 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Hash Guard"
+              description="This project began as a bash script, showcased during my cybersecurity boot camp, which earned a high grade for the final project. I've expanded upon it by creating a user-friendly GUI in Python, enabling easy file integrity comparison through hash algorithms and logging results to enhance usability and functionality."
+              ghLink="https://github.com/GetMeAThadCola/Scripting-Projects/tree/main/VSCodePojects/HashGuard"
             />
           </Col>
 
@@ -36,10 +35,9 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Lets Go Phishing"
+              description="For an educational project, I simulated a phishing attack on myself using Zphisher, aiming to understand phishing techniques. This hands-on exercise enhanced my comprehension of social engineering tactics, phishing prevention, and cybersecurity awareness, bolstering my skills in recognizing and mitigating phishing threats."
+              ghLink="https://github.com/GetMeAThadCola/Scripting-Projects/tree/main/CyberSec%20Projects/Phishing"
             />
           </Col>
 
@@ -47,10 +45,9 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Azure Cloud Security"
+              description="In the 24-week Cybersecurity BootCamp at ASU, one of the key projects involved setting up a virtual network in Microsoft Azure and implementing various security features to protect both the website hosted on the network and the network itself. "
+              ghLink="https://github.com/GetMeAThadCola/Scripting-Projects/tree/main/CyberSec%20Projects/Security%20Azure%20(Cloud)%20Network"             
             />
           </Col>
 
@@ -58,10 +55,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Recipe AI"
+              description="This Python application is a Recipe Generator that allows users to discover new recipes based on keywords or ingredients they provide. It leverages the Edamam Recipe Search API to fetch random recipes tailored to the user's input. The application features a user-friendly graphical user interface (GUI) built with tkinter, making it easy for users to interact with and find recipe inspiration."
+              ghLink="https://github.com/GetMeAThadCola/Scripting-Projects/tree/main/VSCodePojects/Recipe%20Generator"
             />
           </Col>
 
@@ -69,10 +65,9 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Exploit Generator"
+              description="This code is a Python script for a simple port scanner with a graphical user interface (GUI) using the Tkinter library. It allows a user to enter an IP address, a range of ports (start and end), and then initiates a port scanning process. The script attempts to connect to each port in the specified range and identifies open ports. "
+              ghLink="https://github.com/GetMeAThadCola/Scripting-Projects/tree/main/VSCodePojects/ExploitGenerator"
             />
           </Col>
 
