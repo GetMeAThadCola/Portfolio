@@ -1,0 +1,51 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: black; /* Set the background to black */
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    background-size: cover;
+}
+
+form {
+    width: 400px;
+    height: 450px;
+    box-sizing: border-box;
+    border-radius: 5mm;
+    padding: 40px 30px;
+    backdrop-filter: blur(5px) saturate(160%);
+    -webkit-backdrop-filter: blur(5px) saturate(160%);
+    background: #000; /* Changed to solid black */
+    border: 0.5mm solid rgba(0, 0, 0, 0.65);
+    position: relative;
+    background: black; /* Set the form background to black */
+}
+
+.title {
+    width: 100%;
+    font-family: poppins;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.inputs {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Add the rest of the styles for the other classes used in your HTML */
