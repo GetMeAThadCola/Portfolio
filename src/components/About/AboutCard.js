@@ -12,8 +12,7 @@ function AboutCard() {
             from <span className="purple"> Flagstaff, Arizona </span>
             <br /> I am a recent graduate of the ASU Cybersecurity Bootcamp with a focus on Comptia Sec+ certification. I am actively preparing for the Comptia Sec+ examination and subsequently intend to pursue studies for the Amazon Web Services Practitioner certification.
             <br />
-            Additionally, I am currently employed as a the IT Assocaite at STAR School in Flagstaff
-            <br />
+            I am currently employed as an IT Associate at STAR School in Flagstaff, Arizona. In this role, I manage various responsibilities including network monitoring, end-user troubleshooting, printer issue resolution, and the administration of VOIP services to ensure effective telecommunications for our school.
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
