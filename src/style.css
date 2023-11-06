@@ -334,10 +334,11 @@ button:focus {
   padding-top: 50px;
   font-size: 1.2em !important;
   text-align: left;
-  zoom: 175%; /* Set the zoom level to 150% */
-
-  
 }
+body {
+  zoom: 150%; /* Set the zoom level to 150% */
+}
+
 
 .home-about-social {
   text-align: center !important;
