@@ -6,9 +6,9 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
-  AiFillYouTube,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 function Home2() {
   return (
@@ -92,7 +92,7 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-                  <AiFillYouTube />
+                  <IoLogoYoutube/>
                 </a>
               </li>
             </ul>
