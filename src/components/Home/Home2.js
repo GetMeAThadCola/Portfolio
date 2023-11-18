@@ -84,6 +84,17 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.youtube.com/channel/UClQ_4XoVOAmgcfV1BwvIzJw"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+          {/* Replace 'YourYouTubeIconComponent' with the appropriate YouTube icon component */}
+          <YourYouTubeIconComponent />
+        </a>
+            </li>
             </ul>
           </Col>
         </Row>
