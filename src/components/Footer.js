@@ -6,6 +6,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 function Footer() {
   let date = new Date();
@@ -39,6 +40,16 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.youtube.com/channel/UClQ_4XoVOAmgcfV1BwvIzJw"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <IoLogoYoutube />
               </a>
             </li>
           </ul>
