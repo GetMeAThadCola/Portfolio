@@ -93,9 +93,9 @@ function Home2() {
                   className="icon-colour  home-social-icons"
                 >
           {/* Replace 'YourYouTubeIconComponent' with the appropriate YouTube icon component */}
-          <AiFillYouTube/>
-        </a>
-            </li>
+                <AiFillYouTube/>
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
