@@ -92,7 +92,6 @@ function Home2() {
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
                 >
-          {/* Replace 'YourYouTubeIconComponent' with the appropriate YouTube icon component */}
                 <AiFillYouTube />
                 </a>
               </li>
