@@ -226,25 +226,5 @@
             }
     }
           </script>
-            <script>
-              // Function to set zoom based on device
-              function setZoomForDevice() {
-                // Get the device width
-                var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-          
-                // Set different zoom levels based on device width
-                if (deviceWidth <= 600) {
-                  document.body.style.zoom = "0.8"; // Adjust the zoom level as needed
-                } else if (deviceWidth <= 1024) {
-                  document.body.style.zoom = "1.2"; // Adjust the zoom level as needed
-                } else {
-                  document.body.style.zoom = "2.0"; // Default zoom level for larger devices
-                }
-              }
-          
-              // Call the function when the page loads and when the window is resized
-              window.onload = setZoomForDevice;
-              window.onresize = setZoomForDevice;
-            </script>
         </body>
         </html>
