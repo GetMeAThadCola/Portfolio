@@ -22,7 +22,7 @@ function Home2() {
             <p className="home-about-body">
               I fell in love with Technologies and I strive to be a SOC anaylist soon.
               <br />
-              <br />I am fluent in classics like
+              <br />I am very knowledgeable in the classics 
               <i>
                 <b className="purple"> Python, Javascript and Bash </b>
               </i>
@@ -30,10 +30,10 @@ function Home2() {
               <br />
               My field of Interest's are building new &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
+                <b className="purple">Web Technologies and Cybersecurity </b> and
                 also in areas related to{" "}
                 <b className="purple">
-                  Blockchain.
+                  Hacking Tools and OWASP.
                 </b>
               </i>
               <br />
