@@ -10,9 +10,9 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Hunter Carbone </span>
             from <span className="purple"> Flagstaff, Arizona </span>
-            <br /> I am a recent graduate of the ASU Cybersecurity Bootcamp with a focus on Comptia Sec+ certification. I just recenlty passed my CompTIA Secuirty + exam as well as a Amazon Cloud Certification as well.
+            <br /> I am a recent graduate of the <span className="purple"> ASU Cybersecurity Bootcamp </span> with a focus on Comptia Sec+ certification. I just recenlty passed my CompTIA Secuirty + exam as well as a Amazon Cloud Certification as well.
             <br />
-            I am currently employed as an PC LAN TECH in Northern Arizona. In this role, I manage various responsibilities including end-user troubleshooting, printer issue resolution, and various other improvment projects.
+            I am currently employed as an <span className="purple"> PC LAN TECH </span> in Northern Arizona. In this role, I manage various responsibilities including end-user troubleshooting, printer issue resolution, and various other improvment projects.
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
