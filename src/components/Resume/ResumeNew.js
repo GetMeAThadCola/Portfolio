@@ -5,7 +5,7 @@ import Particle from "../Particle";
 import { AiOutlineDownload } from "react-icons/ai";
 
 function ResumeNew() {
-  const googleDocsURL = "https://docs.google.com/document/d/1-Rg0NX0CBkNpdKO7G1wBiSdu82la9oTZuDxOiN124vM/view";
+  const googleDocsURL = "https://docs.google.com/document/d/1RVnBLGGxr51HQdXSy_vs9GX58VmBkxTt/view";
 
   return (
     <div>
