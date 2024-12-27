@@ -2,30 +2,41 @@
 <html lang="en">
 
 <head>
-  <!-- Other meta tags and links -->
   <title>Hunter | Portfolio</title>
-  <meta name="description" content="Self Developed personal website build with React.js">
+  <meta name="description" content="Self Developed personal website built with React.js">
   
-  <!-- Your JavaScript code for handling zoom -->
   <script>
-    // Function to set zoom based on device
+    // Function to adjust zoom level based on device width
     function setZoomForDevice() {
-      // Get the device width
-      var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      const deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-      // Set different zoom levels based on device width
+      // Determine the scale factor based on the device width
+      let scale = 1; // Default scale for large devices
       if (deviceWidth <= 600) {
-        document.body.style.zoom = "0.6"; // Adjust the zoom level as needed
+        scale = 0.6; // Mobile devices
       } else if (deviceWidth <= 1024) {
-        document.body.style.zoom = "1.5"; // Adjust the zoom level as needed
+        scale = 1.5; // Tablets
       } else {
-        document.body.style.zoom = "2.0"; // Default zoom level for larger devices
+        scale = 2.0; // Desktops
       }
+
+      // Apply the scale transformation
+      document.body.style.transform = `scale(${scale})`;
+      document.body.style.transformOrigin = '0 0'; // Set the origin to the top-left
     }
 
-    // Call the function when the page loads and when the window is resized
+    // Debounce function to limit the frequency of resize handling
+    function debounce(func, wait) {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    // Set zoom on page load and bind debounced resize handler
     window.onload = setZoomForDevice;
-    window.onresize = setZoomForDevice;
+    window.onresize = debounce(setZoomForDevice, 150);
   </script>
 </head>
 
