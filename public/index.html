@@ -10,22 +10,22 @@
     function setZoomForDevice() {
       const deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-      // Determine the scale factor based on the device width
-      let scale = 1; // Default scale for large devices
+      // Adjust scale levels based on device type
+      let scale = 1; // Default scale for large devices (laptops/desktops)
       if (deviceWidth <= 600) {
         scale = 0.6; // Mobile devices
       } else if (deviceWidth <= 1024) {
-        scale = 1.5; // Tablets
+        scale = 1.2; // Tablets
       } else {
-        scale = 2.0; // Desktops
+        scale = 1.0; // Laptops/desktops
       }
 
       // Apply the scale transformation
       document.body.style.transform = `scale(${scale})`;
-      document.body.style.transformOrigin = '0 0'; // Set the origin to the top-left
+      document.body.style.transformOrigin = '0 0'; // Top-left origin
     }
 
-    // Debounce function to limit the frequency of resize handling
+    // Debounce function to prevent frequent calls during resizing
     function debounce(func, wait) {
       let timeout;
       return function (...args) {
@@ -34,7 +34,7 @@
       };
     }
 
-    // Set zoom on page load and bind debounced resize handler
+    // Set zoom on page load and on window resize
     window.onload = setZoomForDevice;
     window.onresize = debounce(setZoomForDevice, 150);
   </script>
